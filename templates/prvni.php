@@ -14,7 +14,7 @@ setcookie($roleC, $value, time()+24*7*60*60*1000, '/');
 
  function writeRole(){
     $page = $_SERVER['PHP_SELF'];
-    $sec = "1";
+    $sec = "5";
     header("Refresh: $sec; url=$page");
    echo "<h1> Jsem:".$_COOKIE[$GLOBALS['roleC']]."</h1>";
  }
@@ -29,8 +29,6 @@ setcookie($roleC, $value, time()+24*7*60*60*1000, '/');
 <?php writeRole()?>
 
 <h1> Kapitola </h1> 
-    
-</body>
 
 
 </html>
