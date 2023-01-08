@@ -20,7 +20,7 @@ class Router
      */
     protected $params = [];
 
-/**
+    /**
      * Add a route to the routing table
      *
      * @param string $route  The route URL
@@ -35,6 +35,9 @@ class Router
 
         // Convert variables e.g. {controller}
         $route = preg_replace('/\{([a-z]+)\}/', '(?P<\1>[a-z-]+)', $route);
+
+        // Convert variables with custom regular expressions e.g. {id:\d+}
+        $route = preg_replace('/\{([a-z]+):([^\}]+)\}/', '(?P<\1>\2)', $route);
 
         // Add start and end delimiters, and case insensitive flag
         $route = '/^' . $route . '$/i';
@@ -76,7 +79,6 @@ class Router
         }
 
         return false;
-
     }
 
     /**
@@ -88,47 +90,4 @@ class Router
     {
         return $this->params;
     }
-
-
-/*
-*
-*create a route
-*/
-public function dispatch($url){
-    if($this->match($url)){
-     $controler = $this->params['controller'];
-     $controler = $this->convertToStudlyCaps($controler);  
-     
-     if(class_exists($controler)){
-        $controler_object = new $controler();
-        
-        $action = $this->params['action'];
-        $action = $this->convertToCamelCase($action);
-
-        if(is_callable($controler_object, $action)){
-            $controler_object->$action;
-        }else{
-            echo "Method".$action."in Controler".$controler."has not been found";
-        }
-     }else{
-        echo "Controller class ".$controler."has Not been found";
-     }
-    }else{
-        echo "No route matched.";
-    }
-
-    
-}
-
-protected function convertToStudyCaps($string)
-{
-    return str_repeplace(' ', ucwords(str_replace('-', ' ', $stirng)));
-}
-
-protected function convertToCamelCase($string)
-{
-    return lcfirst(this->convertToStudyCaps($stirng));
-}
-
-
 }
