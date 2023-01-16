@@ -7,7 +7,7 @@
         public function index(){
             //$this->view('Hello');//does not exists
             //$this->view('pages/index'); //the file in views>index.php
-            $data = ['title'=> 'welcome'];
+            $data = ['title'=> 'welcomex'];
             $this->view('pages/index', $data);
         }
 
@@ -18,6 +18,19 @@
         public function about(){
             $data = ['title'=> 'About us'];
             $this->view('pages/about', $data);
+        }
+
+        public function post(){
+            $db = new Database();
+
+            $title = $db->returnPost(0)['nameOfPost'];
+            $id = $db->returnPost(0)['id'];
+            $text = $db->returnPost(0)['text'];
+            
+            $data = ['id' => $id, 'nameOfPost'=> $title, 'text' => $text];
+
+            $this->view('pages/post', $data);
+            //$this->view('pages/post', $title);
         }
 
 
