@@ -20,12 +20,14 @@
             $this->view('pages/about', $data);
         }
 
-        public function post(){
+        public function post($id){
             $db = new Database();
-
-            $title = $db->returnPost(0)['nameOfPost'];
-            $id = $db->returnPost(0)['id'];
-            $text = $db->returnPost(0)['text'];
+            $newPost = $db->returnPost($id);
+            
+            
+            $title = $newPost['nameOfPost'];
+            $id = $newPost['id'];
+            $text = $newPost['text'];
             
             $data = ['id' => $id, 'nameOfPost'=> $title, 'text' => $text];
 
