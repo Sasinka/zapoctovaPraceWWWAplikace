@@ -1,3 +1,0 @@
-<?php $roleC= "roleForCookie";
-
-?>
