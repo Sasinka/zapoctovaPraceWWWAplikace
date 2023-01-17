@@ -5,9 +5,11 @@
     <p><?php echo $data['text'] ?> </p>
 
     <!-- todo button next page-->
-    <form action="inbdex.php" method="get">
-    <input type="submit" value="1" name="currentPage">
-    </form>
+    <div class="tlacitkoNext">
+        <form action="index.php" method="get">
+        <input type="submit" value="1" name="btn">
+        </form>
+    </div>    
 </div>
 <?php 
     if(isset($_GET['btn']) && $_GET['btn'] == "další"){
