@@ -8,5 +8,5 @@
 
 </head>
 <body>
-<h1>Toto je header stránky učíme se datové typy</h1>
+<h1 class="header">Učíme se datové typy</h1>
 

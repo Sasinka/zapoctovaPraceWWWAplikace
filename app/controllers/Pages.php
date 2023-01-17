@@ -7,7 +7,7 @@
         public function index(){
             //$this->view('Hello');//does not exists
             //$this->view('pages/index'); //the file in views>index.php
-            $data = ['title'=> 'welcomex'];
+            $data = ['title'=> 'Vítej'];
             $this->view('pages/index', $data);
         }
 
@@ -23,7 +23,6 @@
         public function post($id){
             $db = new Database();
             $newPost = $db->returnPost($id);
-            
             
             $title = $newPost['nameOfPost'];
             $id = $newPost['id'];

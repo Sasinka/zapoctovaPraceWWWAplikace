@@ -1,9 +1,55 @@
+:root{
+    --darkblue: #1B313E;
+    --fullPageBackground: #F4F4F9;
+    --textBackground: #FFFFFF;
+    --red: #E63A32;
+    --black: #000000;
+
+}
+
 html{
-    background-color: aquamarine;
+    background-color: var(--fullPageBackground);
+    
+}
+
+.post{
+    background-color: var(--textBackground);
+    width: 80%;
+    margin-left: 10em;
+    margin-bottom: 0;
+    
 }
 
 h1{
-    color:cadetblue;
-    background-color: blanchedalmond;
+    color: var(--darkblue);
+   
+}
 
+.nameOfPost{
+    margin-left: 2em;
+    margin-top: 1em;
+}
+
+p{
+    color:var(--black);
+    width: 75%;
+    text-align: center;
+    font-size: large;
+    align-self: center;
+    margin-left: 4em;
+
+}
+
+/*Header*/
+.header{
+    background-color: var(--darkblue);
+    text-align: center;
+    color: var(--fullPageBackground);
+}
+
+/*footer*/
+p.header{
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
 }
