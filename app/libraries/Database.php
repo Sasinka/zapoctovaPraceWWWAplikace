@@ -7,9 +7,9 @@ class Database{
    // public $posts =[];
 
     public function __construct(){
-        $this->posts[0] = array('nameOfPost' => "String", 'id' => 0, 'text' => "text1");
+        $this->posts[1] = array('nameOfPost' => "String", 'id' => 1, 'text' => "String je textový řetězec. Obecně není omezený, resp. každý jazyk ho omezuje jinak. ");
 
-        $this->posts[1] = array('nameOfPost' => "CHAR", 'id' => 1, 'text' => "Již jsme si popsali číselné datové typy. Nyní se přesuneme ke složitějším. Kromě čísel, počítače umí zobrazovat i písmena, slova třeba ty, které právě čtete. Nejprve si ale ukážeme jak se reprezentuji jednotlivá písmena (angl. Characters), tak se jmenuje i daný datový typ character neboli char. <br>
+        $this->posts[0] = array('nameOfPost' => "CHAR", 'id' => 0, 'text' => "Již jsme si popsali číselné datové typy. Nyní se přesuneme ke složitějším. Kromě čísel, počítače umí zobrazovat i písmena, slova třeba ty, které právě čtete. Nejprve si ale ukážeme jak se reprezentuji jednotlivá písmena (angl. Characters), tak se jmenuje i daný datový typ character neboli char. <br>
         V počítači jsou reprezentovane pomoci 2 bajtů neboli osmi bitů. Písmena jsou typicky reprezentována pomocí kódu ktere jsou definovány podle nějakého kodovaní. Nejrozšířenější je asi ASCII tabulka: https://www.asciitable.com/ <br>
         V tabulce výš můžeme vidět 5 sloupečků, první nám říká dekadickou hodnotu, druhý heaxadecimální (viz hexadecimální soustava), další oktadecimální,, čtvrtý kód v html a pátý a poslední sloupec ukazuje daný znak.
         Ascii tabulka je číselná reprezentace různých znaků, které můžeme vidět v pc. Za povšimnutí stojí, že pro nás lidi zajímavými znaky tedy písmeny začíná až na čísle 65.<br><br>

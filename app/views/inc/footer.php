@@ -1,5 +1,5 @@
 
-<p class="header">buy me a coffe</p>
+<p class="header">buy me a coffee</p>
 
 
 </body>
