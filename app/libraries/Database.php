@@ -4,7 +4,7 @@ class Database{
     public $nameOfPost; 
     public $id;
     public $text;
-   // public $posts =[];
+   
 
     public function __construct(){
         $this->posts[1] = array('nameOfPost' => "String", 'id' => 1, 'text' => "String je textový řetězec. Obecně není omezený, resp. každý jazyk ho omezuje jinak. ");
@@ -34,7 +34,6 @@ class Database{
  
 
     public function returnPost($id){
-        //echo $this->posts[$id];
         return $this->posts[$id];
     }
 

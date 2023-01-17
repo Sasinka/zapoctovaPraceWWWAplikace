@@ -6,17 +6,13 @@
     <p><?php echo $data['text'] ?> </p>
 
     <!-- todo button next page-->
-    <div class="tlacitkoNext">
+    <div class="buttonNext">
         <form action="index.php" method="get">
         <input type="submit" value='<?php echo $temp ?>' name="url">
         </form>
     </div>    
 </div>
-<?php 
-    if(isset($_GET['btn']) && $_GET['btn'] == "další"){
-        //post(1);
-    }
-?>
+
 
 
 <?php require APPROOT.'/views/inc/footer.php'?>

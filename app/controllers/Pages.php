@@ -1,7 +1,6 @@
 <?php
     class Pages extends Controller{
         public function __construct(){
-           // echo 'Pages Loaded';
         }
 
         public function index(){
@@ -31,7 +30,7 @@
             $data = ['id' => $id, 'nameOfPost'=> $title, 'text' => $text];
 
             $this->view('pages/post', $data);
-            //$this->view('pages/post', $title);
+            
         }
 
 
