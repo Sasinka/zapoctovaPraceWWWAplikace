@@ -57,4 +57,30 @@ p.header{
 /*button next*/
 .buttonNext{
     margin-left: 30em;
+    background-color:  var(--darkblue); /* Green */
+    border: none;
+    color:var(--red);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}
+
+/*menu*/
+a{
+
+        background-color:  var(--darkblue); /* Green */
+        border: none;
+        color:var(--red);
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      
+}
+
+.menu{
+    margin-left: 30%;
 }

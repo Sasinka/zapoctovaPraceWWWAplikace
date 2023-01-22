@@ -46,6 +46,7 @@ class Core{
     }
 
     public function getUrl(){
+      
         if(isset($_GET['url'])){
             $url = rtrim($_GET['url'], '/');
             $url = filter_var($url, FILTER_SANITIZE_URL);
@@ -53,6 +54,11 @@ class Core{
 
             return $url;
             
+        }
+        if(!isset($_COOKIE[$cookie_name])) {
+            //echo "Cookie '" . $cookie_name . "' is set!<br>";
+            echo "Value is: " . $_POST['expression'];
+            $url = $_POST['expression'];
         }
     }
 
