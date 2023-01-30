@@ -39,10 +39,11 @@ class Core{
         //echo $this->currentMethod;
         //get params
         $this->params = $url ? array_values($url) : [];
-
+      
 
         //call a callback with array of params
         call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
+       
     }
 
     public function getUrl(){
@@ -55,10 +56,12 @@ class Core{
             return $url;
             
         }
-        if(!isset($_COOKIE[$cookie_name])) {
+
+        if(isset($_POST['expression'])) {
             //echo "Cookie '" . $cookie_name . "' is set!<br>";
             echo "Value is: " . $_POST['expression'];
             $url = $_POST['expression'];
+
         }
     }
 

@@ -7,7 +7,7 @@
 <div class="post">
     <h1 class="nameOfPost"><?php echo $data['nameOfPost'] ?> </h1>
     <p><?php echo $data['text'] ?> </p>
-<p><?php echo $_POST['expression']; ?></p>
+<p><?php   $expression = $_POST['expression']; echo $expression; ?></p>
     <!-- todo button next page-->
     <div class="buttonNext">
         <form action="index.php" method="get">
