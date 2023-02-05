@@ -56,8 +56,8 @@ p.header{
 
 /*button next*/
 .buttonNext{
-    margin-left: 30em;
-    background-color:  var(--darkblue); /* Green */
+    margin-left: 40%;
+    background-color:  var(--darkblue);
     border: none;
     color:var(--red);
     padding: 15px 32px;

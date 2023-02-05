@@ -15,7 +15,7 @@
         }
         */
         public function about(){
-            $data = ['title'=> 'About us'];
+            $data = ['title'=> 'O mě'];
             $this->view('pages/about', $data);
         }
 
